@@ -31,8 +31,7 @@ cd backend
 composer install
 cp .env.example .env
 php artisan key:generate
-php artisan migrate
-php artisan migrate:fresh --seed(optional dengan seeder)
+php artisan migrate --seed
 ```
 
 ### Konfigurasi Environment Backend
