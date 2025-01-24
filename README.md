@@ -92,4 +92,4 @@ nama-proyek/
 
 -   Muhammad Furqan
 -   Email: muhfurqans35@gmail.com
--   Tautan Proyek: [URL Repositori]
+-   Tautan Proyek: [[URL Repositori](https://github.com/muhfurqans35/test-1)]
