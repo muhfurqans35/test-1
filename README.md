@@ -21,7 +21,7 @@
 
 ```bash
 git clone https://https://github.com/muhfurqans35/test-1.git
-cd test-1
+cd nama-proyek
 ```
 
 ### Setup Backend (Laravel)
