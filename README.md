@@ -20,8 +20,8 @@
 ### Kloning Repositori
 
 ```bash
-git clone https://github.com/username/nama-proyek.git
-cd nama-proyek
+git clone https://https://github.com/muhfurqans35/test-1.git
+cd test-1
 ```
 
 ### Setup Backend (Laravel)
