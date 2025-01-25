@@ -16,7 +16,6 @@ return new class extends Migration
             $table->foreignId('booking_id')->constrained();
             $table->timestamp('payment_date');
             $table->decimal('amount', 10, 2);
-            $table->string('receipt')->nullable();
             $table->timestamps();
         });
         

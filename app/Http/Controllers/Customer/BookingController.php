@@ -35,7 +35,7 @@ class BookingController extends Controller
 
     public function index()
     {
-        $bookings = Booking::with(['user', 'travelSchedule'])
+        $bookings = Booking::with(['user', 'travelSchedule', 'payment'])
             ->where('user_id', auth()->id())
             ->get();
 
@@ -49,6 +49,14 @@ class BookingController extends Controller
         if ($booking->status !== 'pending') {
             return back()->withErrors(['error' => 'Pembayaran tidak valid.']);
         }
+        
+        $amount = $booking->travelSchedule->ticket_price ?? 0;
+
+        $booking->payment()->create([
+            'payment_date' => now(),
+            'amount' => $amount,
+        ]);
+
         $booking->update(['status' => 'confirmed']);
         return redirect()->back()->with('success', 'Pembayaran berhasil.');
     }

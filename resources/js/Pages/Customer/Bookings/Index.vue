@@ -79,7 +79,8 @@
           </div>
 
           <div class="mt-6 border-t pt-4 text-sm">
-            <p><strong>Jumlah Penumpang:</strong> {{ selectedBooking?.travel_schedule.quota }}</p>
+            <p><strong>Tanggal Pemesanan:</strong> {{ new Date(selectedBooking?.created_at).toLocaleDateString() }}</p>
+            <p><strong>Tanggal Pembayaran:</strong> {{ new Date(selectedBooking.payment.payment_date).toLocaleDateString() }}</p>
             <p><strong>Harga Tiket:</strong> Rp {{ Math.floor(selectedBooking?.travel_schedule.ticket_price) }}</p>
           </div>
 
